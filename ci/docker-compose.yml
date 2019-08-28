@@ -1,3 +1,4 @@
+# https://jenkins.io/doc/book/installing/
 # https://github.com/vimagick/dockerfiles/tree/master/jenkins
 jenkins:
   image: jenkins/jenkins:lts-alpine
