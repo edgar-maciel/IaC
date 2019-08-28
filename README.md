@@ -16,11 +16,13 @@ Infrastructure as code (IaC) is the process of managing and provisioning compute
 - https://github.com/mritd/dockerfile
 - https://github.com/jessfraz/dockerfiles
 
-
 #### Docker
-[Docker](https://www.docker.com/) is a set of platform-as-a-service (PaaS) products that use operating-system-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. All containers are run by a single operating-system kernel and are thus more lightweight than virtual machines. <small> [wiki](https://en.wikipedia.org/wiki/Docker_(software)) </small>
 
-**Install**
+[Docker](https://www.docker.com/) is a set of platform-as-a-service (PaaS) products that use operating-system-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. All containers are run by a single operating-system kernel and are thus more lightweight than virtual machines. <small> [wiki](<https://en.wikipedia.org/wiki/Docker_(software)>) </small>
+
+##### Install
+
 To get started with Docker Engine - Community on Ubuntu, make sure you meet the prerequisites, then [install Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/).
 
-
+Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application’s services, then [install Docker Compose
+](https://docs.docker.com/compose/install/).
