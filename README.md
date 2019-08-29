@@ -26,3 +26,16 @@ To get started with Docker Engine - Community on Ubuntu, make sure you meet the 
 
 Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application’s services, then [install Docker Compose
 ](https://docs.docker.com/compose/install/).
+
+##### Commands
+
+```
+    docker build -t rili:jenkins -f Dockerfile .
+    
+    docker run -p 9090:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home 6ada35f0691c
+
+    docker run -p 9090:8080 -p 50000:50000 6ada35f0691c
+
+```
+
+- porta - localhost:container

@@ -3,10 +3,10 @@
 jenkins:
   image: jenkins/jenkins:lts-alpine
   ports:
-    - "8080:8080"
+    - "80:8080"
     - "50000:50000"
   volumes:
     - ./data:/var/jenkins_home
   environment:
-    - JAVA_OPTS=-Dhudson.footerURL=http://jenkins.easypi.pro
+    - JAVA_OPTS=-Dhudson.footerURL=http://ci.rili.be
   restart: always
