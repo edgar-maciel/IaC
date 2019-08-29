@@ -31,7 +31,7 @@ Compose is a tool for defining and running multi-container Docker applications. 
 
 ```
     docker build -t rili:jenkins -f Dockerfile .
-    
+
     docker run -p 9090:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home 6ada35f0691c
 
     docker run -p 9090:8080 -p 50000:50000 6ada35f0691c
