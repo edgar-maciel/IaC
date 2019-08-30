@@ -1,5 +1,6 @@
 # https://github.com/popularowl/cloud-squirrels/tree/master/jenkins/jenkins-setup-docker-terraform/files
-# FROM jenkins/jenkins:latest
+# https://jenkins.io/doc/book/installing/
+# https://github.com/vimagick/dockerfiles/tree/master/jenkins
 FROM jenkins/jenkins:lts-alpine
 
 # install jenkins plugins
