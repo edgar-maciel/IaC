@@ -30,6 +30,12 @@ Compose is a tool for defining and running multi-container Docker applications. 
 ##### Commands
 
 ```
+    sudo usermod -aG docker $(whoami)
+
+    docker-compose build
+
+    docker-compose up --build
+
     docker build -t rili:jenkins -f Dockerfile .
 
     docker run -p 9090:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home 6ada35f0691c
