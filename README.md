@@ -42,6 +42,9 @@ Compose is a tool for defining and running multi-container Docker applications. 
 
     docker run -p 9090:8080 -p 50000:50000 6ada35f0691c
 
+    https://stackoverflow.com/questions/35734474/connect-to-docker-container-as-user-other-than-root
+    docker exec -it --user root <container id> /bin/bash
+
 ```
 
 - porta - localhost:container

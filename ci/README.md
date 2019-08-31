@@ -9,6 +9,15 @@ Jenkins is an free and open source automation server written in Java. Jenkins he
 ##### Commands
 
 ```
-    sudo mkdir /var/jenkins_home
-    sudo chown -R 1000:1000 /var/jenkins_home
+    https://github.com/jenkinsci/docker/issues/177#issuecomment-163656932
+    sudo chown -R 1000:1000 data
+
+
+    https://github.com/gliderlabs/docker-alpine/issues/183
+    apk add openrc --no-cache
+
+    https://wiki.alpinelinux.org/wiki/Docker
+    apk add docker
+    rc-update add docker boot
+    service docker start
 ```
