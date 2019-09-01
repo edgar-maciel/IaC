@@ -36,9 +36,10 @@ RUN /usr/local/bin/install-plugins.sh \
     sonar \
     subversion
 
-COPY resources/basic-security.groovy /usr/share/jenkins/ref/init.groovy.d/basic-security.groovy
-COPY resources/maven-global-settings-files.xml /usr/share/jenkins/ref/maven-global-settings-files.xml
-ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
+# COPY resources/basic-security.groovy /usr/share/jenkins/ref/init.groovy.d/basic-security.groovy
+# COPY resources/maven-global-settings-files.xml /usr/share/jenkins/ref/maven-global-settings-files.xml
+
+# ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
 
 USER root
 
