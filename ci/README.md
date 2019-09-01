@@ -7,6 +7,7 @@ Jenkins is an free and open source automation server written in Java. Jenkins he
 - https://github.com/jenkinsci/docker/blob/master/README.md
 
 ##### Commands
+https://github.com/vimagick/dockerfiles/tree/master/jenkins
 
 ```
     https://github.com/jenkinsci/docker/issues/177#issuecomment-163656932
