@@ -21,4 +21,6 @@ https://github.com/vimagick/dockerfiles/tree/master/jenkins
     apk add docker
     rc-update add docker boot
     service docker start
+
+    https://jenkins.io/doc/book/pipeline/docker/
 ```
