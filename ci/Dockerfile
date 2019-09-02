@@ -16,7 +16,6 @@ RUN /usr/local/bin/install-plugins.sh \
     role-strategy \ 
     ec2 \
     locale \
-    pipeline \
     blueocean \
     build-environment \
     cloudbees-folder \
