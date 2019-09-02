@@ -10,8 +10,13 @@ RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
 RUN apk add --update shadow \
     && groupadd -g 50 staff \
     && usermod -a -G staff jenkins
+
 USER jenkins
 RUN /usr/local/bin/install-plugins.sh \
+    role-strategy \ 
+    ec2 \
+    locale \
+    pipeline \
     blueocean \
     build-environment \
     cloudbees-folder \
@@ -22,7 +27,6 @@ RUN /usr/local/bin/install-plugins.sh \
     docker-slaves \
     envinject \
     git \
-    greenballs \
     groovy \
     http_request \
     job-dsl \
@@ -30,16 +34,14 @@ RUN /usr/local/bin/install-plugins.sh \
     naginator \
     pam-auth \
     pipeline-utility-steps \
-    nexus-artifact-uploader \
     slack \
     workflow-aggregator \
-    sonar \
-    subversion
+    sonar 
 
-# COPY resources/basic-security.groovy /usr/share/jenkins/ref/init.groovy.d/basic-security.groovy
-# COPY resources/maven-global-settings-files.xml /usr/share/jenkins/ref/maven-global-settings-files.xml
+COPY resources/basic-security.groovy /usr/share/jenkins/ref/init.groovy.d/basic-security.groovy
+COPY resources/maven-global-settings-files.xml /usr/share/jenkins/ref/maven-global-settings-files.xml
 
-# ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
+ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
 
 USER root
 
