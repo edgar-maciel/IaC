@@ -15,6 +15,7 @@ USER jenkins
 RUN /usr/local/bin/install-plugins.sh \
     role-strategy \ 
     ec2 \
+    pipeline-aws \
     locale \
     blueocean \
     build-environment \
