@@ -9,7 +9,7 @@ services:
       - "50000:50000"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      # - ./data:/var/jenkins_home
+      - ./data:/var/jenkins_home
     environment:
       - JAVA_OPTS=-Dhudson.footerURL=http://ci.rili.be
     restart: always
