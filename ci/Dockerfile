@@ -25,7 +25,7 @@ RUN /usr/local/bin/install-plugins.sh \
     credentials \
     docker-plugin \
     docker-slaves \
-    configuration-as-code \
+    #configuration-as-code \
     git \
     groovy \
     http_request \
