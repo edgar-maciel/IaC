@@ -1,6 +1,0 @@
-blueocean
-git
-role-strategy
-ec2
-locale
-pipeline
