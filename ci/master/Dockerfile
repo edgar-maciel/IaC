@@ -1,11 +1,7 @@
-# https://github.com/liatrio/alpine-jenkins
-# FROM jenkins/jenkins:2.154-alpine
 FROM jenkins/jenkins:lts-alpine
 
 USER root
 
-RUN apk -U add docker
-# Setup Jenkins
 RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
 RUN apk add --update shadow \
     && groupadd -g 50 staff \
@@ -20,20 +16,20 @@ RUN /usr/local/bin/install-plugins.sh \
     blueocean \
     build-environment \
     cloudbees-folder \
-    credentials-binding \
-    credentials \
+#    credentials-binding \
+#    credentials \
     docker-plugin \
-    docker-slaves \
+#    docker-slaves \
     git \
     groovy \
-    http_request \
+#    http_request \
     job-dsl \
     jobConfigHistory \
     naginator \
     pam-auth \
     pipeline-utility-steps \
-    slack \
-    workflow-aggregator \
+#    slack \
+#    workflow-aggregator \
     sonar 
 
 COPY assets/basic-security.groovy /usr/share/jenkins/ref/init.groovy.d/basic-security.groovy
