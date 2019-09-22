@@ -27,25 +27,3 @@ To get started with Docker Engine - Community on Ubuntu, make sure you meet the 
 
 Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application’s services, then [install Docker Compose
 ](https://docs.docker.com/compose/install/).
-
-##### Commands
-
-```
-    sudo usermod -aG docker $(whoami)
-
-    docker-compose build
-
-    docker-compose up --build
-
-    docker build -t rili:jenkins -f Dockerfile .
-
-    docker run -p 9090:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home 6ada35f0691c
-
-    docker run -p 9090:8080 -p 50000:50000 6ada35f0691c
-
-    https://stackoverflow.com/questions/35734474/connect-to-docker-container-as-user-other-than-root
-    docker exec -it --user root <container id> /bin/bash
-
-```
-
-- porta - localhost:container
