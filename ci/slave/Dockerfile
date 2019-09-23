@@ -7,4 +7,5 @@ RUN apt-get update \
     && apt-get install nodejs -yq \
     && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN useradd -rm -d /home/jenkins -s /bin/bash -g root -G sudo -u 1000 jenkins -p jenkins
+RUN usermod -aG sudo jenkins
+RUN echo "jenkins:jenkins" | chpasswd
