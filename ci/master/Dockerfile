@@ -11,25 +11,18 @@ USER jenkins
 RUN /usr/local/bin/install-plugins.sh \
     role-strategy \ 
     ec2 \
-    pipeline-aws \
     locale \
-    blueocean \
+#    blueocean \
     build-environment \
     cloudbees-folder \
-#    credentials-binding \
-#    credentials \
     docker-plugin \
-#    docker-slaves \
     git \
     groovy \
-#    http_request \
     job-dsl \
     jobConfigHistory \
     naginator \
     pam-auth \
     pipeline-utility-steps \
-#    slack \
-#    workflow-aggregator \
     sonar 
 
 COPY assets/basic-security.groovy /usr/share/jenkins/ref/init.groovy.d/basic-security.groovy

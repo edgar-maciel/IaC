@@ -7,5 +7,5 @@ RUN apt-get update \
     && apt-get install nodejs -yq \
     && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN usermod -aG sudo jenkins
-RUN echo "jenkins:jenkins" | chpasswd
+#RUN usermod -aG sudo jenkins
+#RUN echo "jenkins:jenkins" | chpasswd
