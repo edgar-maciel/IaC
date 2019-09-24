@@ -12,10 +12,8 @@ RUN /usr/local/bin/install-plugins.sh \
     role-strategy \ 
     ec2 \
     locale \
-#    blueocean \
     build-environment \
-    cloudbees-folder \
-    docker-plugin \
+    yet-another-docker-plugin \
     git \
     groovy \
     job-dsl \
@@ -25,7 +23,7 @@ RUN /usr/local/bin/install-plugins.sh \
     pipeline-utility-steps \
     sonar 
 
-COPY assets/basic-security.groovy /usr/share/jenkins/ref/init.groovy.d/basic-security.groovy
+COPY basic-security.groovy /usr/share/jenkins/ref/init.groovy.d/basic-security.groovy
 
 ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
 
