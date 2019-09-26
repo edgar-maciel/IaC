@@ -1,6 +1,6 @@
 FROM jenkins/slave:alpine
 
-# USER root
+USER root
 
 RUN echo "install node.js" 
 #RUN apk add --update nodejs npm autoconf automake
