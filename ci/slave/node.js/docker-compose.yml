@@ -2,5 +2,5 @@ version: "2.1"
 
 services:
   jenkins:
-    image: rilibe:jenkins-slave:node.js
+    image: rilibe/ci-slave:node.js
     build: .

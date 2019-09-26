@@ -2,7 +2,7 @@ version: "2.1"
 
 services:
   jenkins:
-    image: rilibe:jenkins-master
+    image: rilibe/ci-master
     build: .
     ports:
       - "80:8080"

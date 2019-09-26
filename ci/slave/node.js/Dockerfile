@@ -1,11 +1,8 @@
-FROM jenkins/ssh-slave
+FROM jenkins/slave:alpine
 
-RUN apt-get update \
-    && apt-get -y --no-install-recommends install \
-    && apt-get install curl sudo -yq \
-    && curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - \
-    && apt-get install nodejs -yq \
-    && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+USER root
 
-#RUN usermod -aG sudo jenkins
-#RUN echo "jenkins:jenkins" | chpasswd
+RUN echo "install node.js" 
+RUN apk add --update nodejs npm
+
+USER root
