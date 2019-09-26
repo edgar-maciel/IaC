@@ -11,6 +11,7 @@ USER jenkins
 RUN /usr/local/bin/install-plugins.sh \
     role-strategy \ 
     ec2 \
+    pipeline-aws-plugin \
     locale \
     build-environment \
     yet-another-docker-plugin \
