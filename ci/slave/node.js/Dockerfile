@@ -2,7 +2,9 @@ FROM jenkins/slave:alpine
 
 USER root
 
-RUN groupadd -g 50 staff \
+RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
+RUN apk add --update shadow \
+    && groupadd -g 50 staff \
     && usermod -a -G staff jenkins
 
 RUN echo "install node.js" 
