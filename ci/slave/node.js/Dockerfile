@@ -1,6 +1,9 @@
 FROM jenkins/slave:alpine
 
-USER jenkins
+USER root
+
+RUN groupadd -g 50 staff \
+    && usermod -a -G staff jenkins
 
 RUN echo "install node.js" 
 #RUN apk add --update nodejs npm autoconf automake
