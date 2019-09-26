@@ -24,7 +24,7 @@ RUN /usr/local/bin/install-plugins.sh \
     pipeline-utility-steps \
     sonar 
 
-COPY basic-security.groovy /usr/share/jenkins/ref/init.groovy.d/basic-security.groovy
+COPY assets/basic-security.groovy /usr/share/jenkins/ref/init.groovy.d/basic-security.groovy
 
 ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
 
