@@ -1,13 +1,13 @@
 FROM jenkins/slave:alpine
 
-USER root
+USER jenkins
 
 RUN echo "install node.js" 
 #RUN apk add --update nodejs npm autoconf automake
 #RUN apk add --update alpine-sdk autoconf libtool libltdl bash nodejs npm
 RUN apk add --update autoconf libtool libltdl bash nodejs npm
 
-# USER root
+USER jenkins
 
 # FROM jenkins/slave:latest
 
