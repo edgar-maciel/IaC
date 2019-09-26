@@ -7,10 +7,10 @@ RUN apk add --update shadow \
     && groupadd -g 50 staff \
     && usermod -a -G staff jenkins
 
-RUN echo "install node.js" 
+RUN echo "install packages" 
 #RUN apk add --update nodejs npm autoconf automake
 #RUN apk add --update alpine-sdk autoconf libtool libltdl bash nodejs npm
-RUN apk add --update autoconf libtool libltdl bash nodejs npm
+RUN apk add --update alpine-sdk autoconf libtool libltdl bash nodejs npm
 
 USER jenkins
 
