@@ -10,13 +10,27 @@ RUN apk add --update shadow \
 RUN echo "install packages" 
 #RUN apk add --update nodejs npm autoconf automake
 #RUN apk add --update alpine-sdk autoconf libtool libltdl bash nodejs npm
-RUN apk add --update alpine-sdk autoconf libtool libltdl bash nodejs npm
+RUN apk add --update \
+    alpine-sdk \
+    libtool \
+    libltdl \
+    autoconf \
+    automake \
+    bash \
+    g++ \
+    libc6-compat \
+    libjpeg-turbo-dev \
+    libpng-dev \
+    make \
+    nasm \
+    nodejs \
+    npm
 
-USER jenkins
+# USER jenkins
 
 # FROM jenkins/slave:latest
 
-# USER root
+USER root
 
 # RUN echo "install node.js" 
 # RUN apt-get update \
