@@ -1,13 +1,22 @@
-FROM jenkins/slave:latest
+FROM jenkins/slave:alpine
 
 USER root
 
 RUN echo "install node.js" 
-RUN apt-get update \
-    && apt-get -y --no-install-recommends install \
-    && apt-get install curl sudo -yq \
-    && curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - \
-    && apt-get install nodejs -yq \
-    && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apk add --update nodejs npm autoconf
 
 USER root
+
+# FROM jenkins/slave:latest
+
+# USER root
+
+# RUN echo "install node.js" 
+# RUN apt-get update \
+#     && apt-get -y --no-install-recommends install \
+#     && apt-get install curl sudo -yq \
+#     && curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - \
+#     && apt-get install nodejs -yq \
+#     && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# USER root
