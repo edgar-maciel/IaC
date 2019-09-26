@@ -1,0 +1,6 @@
+version: "2.1"
+
+services:
+  jenkins:
+    image: rilibe/ci-slave:go
+    build: .
