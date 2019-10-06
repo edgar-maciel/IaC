@@ -23,7 +23,6 @@ services:
     deploy:
       mode: replicated
       replicas: 1      
-
   logstash:
     build:
       context: logstash/
@@ -32,10 +31,10 @@ services:
         source: ./logstash/config.yml
         target: /usr/share/logstash/config/logstash.yml
         read_only: true
-      - type: bind
-        source: ./logstash/pipeline.config
-        target: /usr/share/logstash/pipeline
-        read_only: true
+      # - type: bind
+      #   source: ./logstash/pipeline.conf
+      #   target: /usr/share/logstash/pipeline
+      #   read_only: true
     ports:
       - "5000:5000"
       - "9600:9600"
@@ -48,7 +47,6 @@ services:
       replicas: 1      
     depends_on:
       - elasticsearch
-
   kibana:
     build:
       context: kibana/
@@ -70,3 +68,6 @@ services:
 networks:
   elk:
     driver: bridge
+
+volumes:
+  elasticsearch:
