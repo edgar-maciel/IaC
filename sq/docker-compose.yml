@@ -11,7 +11,7 @@ services:
     links:
       - db
     ports:
-      - "9001:9000"
+      - "80:9000"
     volumes:
       - sonarqube:/var/sonarqube
       - sonarqube:/opt/sonarqube/extensions
