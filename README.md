@@ -10,6 +10,9 @@ Infrastructure as code (IaC) is the process of managing and provisioning compute
 - [Security]()
 - [Software Quality](https://en.wikipedia.org/wiki/Software_quality)
 
+#### AWS EC2 Instances
+Ubuntu Server 16.04 LTS (HVM), SSD Volume Type
+
 #### Docker
 
 [Docker](https://www.docker.com/) is a set of platform-as-a-service (PaaS) products that use operating-system-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. All containers are run by a single operating-system kernel and are thus more lightweight than virtual machines. <small> [wiki](<https://en.wikipedia.org/wiki/Docker_(software)>) </small>
