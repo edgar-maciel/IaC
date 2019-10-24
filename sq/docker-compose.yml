@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  sonarqube:
+    image: sonarqube:latest
+    environment:
+      - SONARQUBE_JDBC_URL=jdbc:postgresql://db:5432/sonar
+      - SONARQUBE_VOL=/var/sonarqube
+    depends_on:
+      - db
+    links:
+      - db
+    ports:
+      - "9001:9000"
+    volumes:
+      - sonarqube:/var/sonarqube
+      - sonarqube:/opt/sonarqube/extensions
+
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=sonar
+      - POSTGRES_PASSWORD=sonar
+
+volumes:
+  sonarqube:
