@@ -12,6 +12,8 @@ Infrastructure as code (IaC) is the process of managing and provisioning compute
 
 ### AWS EC2 Instances
 Ubuntu Server 16.04 LTS (HVM), SSD Volume Type
+- t2.micro
+- t2.small
 
 ### Docker
 
