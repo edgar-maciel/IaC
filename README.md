@@ -6,7 +6,7 @@ Infrastructure as code (IaC) is the process of managing and provisioning compute
 - [Code Control]()
 - [Data]() -  [Log Management]()
 - [Diagnoses]()
-- [Router]()
+- [Proxy]()
 - [Security]()
 - [Software Quality](https://en.wikipedia.org/wiki/Software_quality)
 
