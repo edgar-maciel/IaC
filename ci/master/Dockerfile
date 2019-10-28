@@ -17,10 +17,11 @@ RUN /usr/local/bin/install-plugins.sh \
     yet-another-docker-plugin \
     git \
     groovy \
-    job-dsl \
-    jobConfigHistory \
-    naginator \
-    pam-auth \
+    aws-codecommit-trigger \
+    # job-dsl \
+    # jobConfigHistory \
+    # naginator \
+    # pam-auth \
     pipeline-utility-steps \
     sonar 
 
