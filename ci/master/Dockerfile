@@ -8,6 +8,7 @@ RUN apk add --update shadow \
     && usermod -a -G staff jenkins
 
 USER jenkins
+
 RUN /usr/local/bin/install-plugins.sh \
     role-strategy \ 
     ec2 \
@@ -27,6 +28,6 @@ RUN /usr/local/bin/install-plugins.sh \
 
 COPY basic-security.groovy /usr/share/jenkins/ref/init.groovy.d/basic-security.groovy
 
-ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
+ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false -Djenkins.install.UpgradeWizard.show=false -Dhudson.footerURL=http://rili.be"
 
 USER root
