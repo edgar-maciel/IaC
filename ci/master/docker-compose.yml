@@ -9,6 +9,4 @@ services:
       - "9080:9080"
     volumes:
       - ./jenkins:/var/jenkins_home
-    # environment:
-    #   - JAVA_OPTS=
     restart: always
