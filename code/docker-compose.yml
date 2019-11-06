@@ -1,15 +1,9 @@
 version: "2"
 
-networks:
-  gitea:
-    external: false
-
 services:
-  server:
-    image: gitea/gitea:latest
-    environment:
-      - USER_UID=1000
-      - USER_GID=1000
+  gitea:
+    image: rilibe/code
+    build: .
     restart: always
     networks:
       - gitea
@@ -18,3 +12,8 @@ services:
     ports:
       - "80:3000"
       - "222:22"
+      - "9191:9191"
+
+networks:
+  gitea:
+    external: false
